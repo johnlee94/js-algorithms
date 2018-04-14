@@ -35,9 +35,6 @@ function caesarCipher(str, num) {
   }
 
   strArr = str.split('')
-  console.log(strArr);
-
-  console.log(alphabetObj['a'])
 
   // note forEach method does not alter original array, rather you need to push
   // new values to a new array
@@ -47,18 +44,17 @@ function caesarCipher(str, num) {
   strArr.forEach(char => {
     numArray.push(alphabetObj[char] + num);
   })
-  console.log(numArray);
 
   // convert the number back to its matching key based on the property value
   convertedArr = [];
   numArray.forEach(char => {
-    // if the number is outside of the range of 0-25, add or subtract 25 until
+    // if the number is outside of the range of 0-25, add or subtract 26 until
     // it falls into the range so that it can be converted back to a letter
     if (char > 25){
       while (char > 25) char = char -26;
     } else if (char < 0) char = char + 26;
     // Object.keys(myObject) returns an array containing names of all myObject's
-    // string properties (i.e. ['a', 'b', ... 'z'] in this case)
+    // string properties (i.e. ['a', 'b', ..., 'z'] in this case)
     // Array.find() returns the value of the first element in an array that satisfies
     // the provided testing function (in this case where key is equal to property value)
     // note: since all keys are unique in an object, find() method works perfectly here
