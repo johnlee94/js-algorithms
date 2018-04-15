@@ -1,6 +1,6 @@
 // ***ARRAY METHODS!!*** //
 
-//forEach
+// *** forEach ***
 // The forEach() method executes a provided function once for each array element.
 // note: does not explicitly change the original array
 var nums = [1, 2, 3]
@@ -11,8 +11,8 @@ nums.forEach(num => {
 // expected output: 3, 4, 5
 // console.log(nums) // => [1, 2, 3];
 
-//splice
-//The slice() method returns a shallow copy of a portion of an array into a
+// *** splice ***
+// The slice() method returns a shallow copy of a portion of an array into a
 // new array object selected from begin to end (end not included).
 // The original array will not be modified.
 var animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
@@ -26,7 +26,7 @@ console.log(animals.slice(2, 4));
 console.log(animals.slice(1, 5));
 // expected output: Array ["bison", "camel", "duck", "elephant"]
 
-//filter
+// ***filter***
 // The filter() method creates a new array with all elements that pass the test implemented by the provided function.
 var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 
@@ -35,7 +35,7 @@ const result = words.filter(word => word.length > 6);
 console.log(result);
 // expected output: Array ["exuberant", "destruction", "present"]
 
-//find
+// ***find***
 // The find() method returns the value of the first element in the array that
 // satisfies the provided testing function. Otherwise undefined is returned.
 var array1 = [5, 12, 8, 130, 44];
@@ -48,7 +48,7 @@ console.log(found);
 // expected output: 12
 
 
-//**sorting an array
+// ***sort***
 // by convention, Array.protoype.sort() sorts an array alphabetically treating
 // its elements as strings
 
@@ -57,7 +57,7 @@ fruitsArray = ['bananas', 'apples', 'raisins'];
 fruistArray.sort() // => ['apples', 'bananas', raisins];
 
   // if you want to sort an array numerically
-  // the compare function within the sort returns a negative, 0, or positive number
+  // then compare function within the sort returns a negative, 0, or positive number
   // which then can be used in the sort method to sort numeric arrays
   var points = [40, 100, 1, 5, 25, 10];
   points.sort(function(a, b){return a - b}); // => [1, 5, 10, 25, 40, 100]
@@ -65,3 +65,21 @@ fruistArray.sort() // => ['apples', 'bananas', raisins];
   // descending
   var points = [40, 100, 1, 5, 25, 10];
   points.sort(function(a, b){return b - a}); // => [100, 40, 25, 10, 5, 1];
+
+// ***reduce***
+// The reduce() method applies a function against an accumulator and each element
+// in the array(left to right) to reduce it to a single value.
+
+const array1 = [1, 2, 3, 4];
+const reducer = (a, b) =>  a + b;
+
+console.log(array1.reduce(reducer));
+// 1 + 2 + 3 + 4
+// expected output: 10
+
+console.log(array1.reduce(reducer), 5);
+// 5 + 1 + 2 + 3 + 4
+// expected output: 15
+
+// ~arguments~
+.reduce(accumulator, currentIndex, index, array)
