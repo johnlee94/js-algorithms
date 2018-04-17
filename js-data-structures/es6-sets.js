@@ -4,6 +4,7 @@
 // whether primitive values or object references.
 
 // Syntax: new Set([iterable]);
+// iterable: any object
 
 const set1 = new Set([1, 2, 3, 4, 5]);
 
@@ -29,7 +30,7 @@ console.log(set1.has(6));
 
 .values() // returns a new Iterator object that contains the values in the set
           // in insertion order
-          
+
 .keys() //Is the same function as the values() function and returns a new
         // Iterator object that contains the values for each element
         // in the Set object in insertion order.
