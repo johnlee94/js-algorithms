@@ -101,3 +101,17 @@ months.splice(4, 1, 'May');
 // replaces 1 element at 4th index
 console.log(months);
 // expected output: Array ['Jan', 'Feb', 'March', 'April', 'May'];
+
+
+/// *** every ***
+// The every() method tests whether all elements in the array pass the test
+// implemented by the provided function.
+
+function isBelowThreshold(currentValue) {
+  return currentValue < 40;
+}
+
+var array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold));
+// expected output: true
