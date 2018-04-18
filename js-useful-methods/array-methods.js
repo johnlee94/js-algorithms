@@ -86,8 +86,9 @@ console.log(array1.reduce(reducer), 5);
 
 
 /// *** splice ***
-// The splice() method changes the contents of an array byremoving existing elements
+// The splice() method changes the contents of an array by removing existing elements
 // and/or adding new elements
+// RETURNS THE ELEMENTS THAT HAVE BEEN REMOVED
 
 // syntax: array.splice(index, number of elements to remove, value to replace/add);
 
