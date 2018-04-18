@@ -16,6 +16,7 @@ function merge (arr1, arr2) {
 
 }
 
+
 // course's
 
 function mergeSort(arr) {
@@ -24,6 +25,7 @@ function mergeSort(arr) {
   let firstHalf= arr.slice(0, middleIndex);
   let secondHalf = arr.slice(middleIndex);
 
+  return merge(mergeSort(firstHalf), mergeSort(secondHalf));
 }
 
 function merge (arr1, arr2) {
@@ -32,11 +34,15 @@ function merge (arr1, arr2) {
     let minElem;
     // note that .shift() returns the element that has been deleted
     if (arr1[0] < arr2[0]) minElem = arr1.shift();
-    else minELem = arr2.shift();
+    else minElem = arr2.shift();
     result.push(minElem);
   }
   // when the while loop finishes, there will be one array with at least
   // one element remaining which we will then have to add to the result array
   if (arr1.length) result = result.concat(arr1);
   else result = result.concat(arr2);
+
+  return result;
 }
+
+mergeSort([6000, 34, 203, 3, 55, 155, 20, 1, 9, 1, 3, 45]);
