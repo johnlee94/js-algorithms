@@ -30,7 +30,7 @@ twoSum([1,2,3,4,5,6,7,8,9,10], 11);
 
 // combinations don't have to be unique
 
-// Course's
+// Course's (time O(n)!)
 
 function twoSum(numArray, sum) {
   let pairs = [];
