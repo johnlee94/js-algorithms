@@ -1,0 +1,5 @@
+// *** LINKED LISTS!! *** //
+
+function linkedList() {
+  
+}
