@@ -37,9 +37,63 @@ var color = "blue";
 
 console.log(color); // => 'blue'
 
-// functions
-console.log(getProduct(2, 3));
+// in actuality, the variable color is being hosted to the top of the file like
+// 'var color;' but not set to anything until it gets to line 36
 
+// functions
+console.log(getProduct(2, 3)); // => returns error getProduct is not a function
+// the function is hosted but not set yet
+
+// function expression
 var getProduct = function(num1, num2) {
-  
+  return num1 * num2;
+};
+
+// this is function declaration and is hoisted differently, the entire function
+// is hoisted!
+console.log(getProduct(2, 3)); // => returns 6
+
+function getProduct(num1, num2) {
+  return num1 * num2;
+};
+
+// note that variables and functions declared inside a function is only hoisted
+// to the top of the function, not the top of the file (function scoping)
+
+// ***NOTE***
+
+// var is FUNCTION SCOPED (global and function scope)
+
+// while const, let are BLOCK SCOPED (global, function, and block scope)
+// in other words, it is only hoisted to the top of the block not to the parent
+// function or the global scope
+
+// example:
+function getTotal() {
+
+  console.log(multiplier); // => undefined
+  console.log(total); // => error: total is not defined
+
+  // total is hosted to top of getTotal function
+  let total = 0;
+
+  for (var i = 0; i < 10; i++) {
+    // valueToAdd is only hoisted to the top of this for loop
+    let valueToAdd = i;
+    // multiplier is hoisted to the top of getTotal function
+    var multiplier = 2;
+    total += valueToAdd * multiplier;
+  }
+
+  return total;
 }
+
+getTotal();
+
+// another note: let and const are not initialized until they are declared
+// and so they cannot be accessed until they are actually declared
+// var, on the other hand, is initialized at the top of their scope
+
+
+// summary: Variables and functions are hoisted to the top of the scope that
+// they are declared in
