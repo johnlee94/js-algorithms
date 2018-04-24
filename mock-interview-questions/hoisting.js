@@ -21,3 +21,25 @@ var globalVar = 'global variable';
 
 
 // course's
+// In javascript, variables and functions are all hoisted to the top of the
+// scope in which they are declared (whether it be global or function scope)
+
+// the Javascript interpretor looks ahead in the code to find all of the variable
+// and function declarations and then hoists those declarations to the top of the file
+// but the variables are not set yet
+
+// example:
+
+// variables
+console.log(color); // => undefined
+
+var color = "blue";
+
+console.log(color); // => 'blue'
+
+// functions
+console.log(getProduct(2, 3));
+
+var getProduct = function(num1, num2) {
+  
+}
