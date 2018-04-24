@@ -3,6 +3,7 @@
 var myCar = {
     color: "Blue",
     logColor: function() {
+        // note this self trick is common practice in js
         var self = this;
         // referencing the myCar object so myCar.color
         console.log("In logColor - this.color: " + this.color);
