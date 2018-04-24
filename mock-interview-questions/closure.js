@@ -1,3 +1,5 @@
+// What is a closure and provide an example?
+
 // Lexical Scoping defines how variable names are resolved in nested functions.
 // Other names of Lexical Scoping are Static Scoping or Closure. It means that the
 // scope of an inner function contains the scope of a parent function
