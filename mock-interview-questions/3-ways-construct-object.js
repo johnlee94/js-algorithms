@@ -66,3 +66,39 @@ const jimsCar = new Car('red', 'tesla', 2014);
 
 console.log(carlysCar.getColor());
 console.log(jimsCar.getColor());
+
+
+// *** ES6 Object Enhancements!!!***
+
+// 1. Property Shorthand
+var x = 0, y = 1
+
+obj = {x, y} // ES5: obj = { x: x, y: y}
+
+// 2. Computed Property Names
+// can go directly into the object itself
+let obj = {
+    foo: "bar",
+    [ "baz" + quux() ]: 42
+}
+
+// Method Properties
+obj = {
+    foo (a, b) {
+        …
+    },
+    bar (x, y) {
+        …
+    },
+    *quux (x, y) {
+        …
+    }
+}
+
+// instead of
+{
+  foo: function (a, b) {
+    ...
+  },
+  ...
+}
