@@ -81,7 +81,7 @@ console.log(list2); // => [1, 2, 3, 4, 5]
 
 // another option
 const list1 = [1, 2, 3, 4, 5];
-const list2 = [list1.concat([]);
+const list2 = list1.concat([]);
 list1.push(6, 7, 8);
 
 console.log(list2);
